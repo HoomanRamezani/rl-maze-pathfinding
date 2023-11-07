@@ -1,6 +1,6 @@
 # rl-maze-pathfinding
 This repository contains the implementation of a deep reinforcement learning model designed to simulate a rat navigating through a maze. The model applies the Q-learning algorithm, showcasing the rat's learning process as it seeks a reward within a randomly generated maze environment. Model is an abstraction of a rat brains basal ganglia decision making process.
-[Link to the full paper](https://docs.google.com/document/d/1bf9Lfl85LOU79KzbvKR7_3M7NwdvtFNDYFOPVd2XghA/edit?usp=sharing)
+[Link to the full paper](https://drive.google.com/file/d/1TbknNOv5Iaw_O57z21_kV5Qzrju_Vegv/view?usp=sharing)
 <div align="center">
   <img src="./images/maze.gif" alt="Maze Visualization" width="350"/>
 </div>
