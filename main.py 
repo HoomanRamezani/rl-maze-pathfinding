@@ -1,0 +1,12 @@
+from data.mazedata import generate_random_maze
+from models.mousebrain import mouse_brain
+from training.train import qtrain
+from utils.utilities import show
+
+def main():
+    maze = generate_random_maze()
+    model = mouse_brain(maze)
+    qtrain(model, maze, epochs=500, max_memory=30, data_size=8)
+
+if __name__ == "__main__":
+    main()
