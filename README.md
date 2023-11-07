@@ -1,22 +1,5 @@
 # rl-maze-pathfinding
 This repository contains the implementation of a deep reinforcement learning model designed to simulate a rat navigating through a maze. The model applies the Q-learning algorithm, showcasing the rat's learning process as it seeks a reward within a randomly generated maze environment. Model is an abstraction of a rat brains basal ganglia decision making process.
-
-## Project Structure
-The repository is structured as follows:
-```
-data/: Contains the raw datasets used for training and evaluation.
-models/: Holds the trained models and their weights for future reference or additional training.
-q-learning-train/: Source code for model implementation, training, and performance metrics.
-data-generation/: Includes the Qmaze environment and Experience replay mechanism
-
-Files
-- `train.py`: Contains the training loop and logic.
-- `mousebrain.py`: Defines the neural network architecture used by the mouse agent.
-- `data-generation/mazedata.py`: Includes the Qmaze environment and Experience replay mechanism.
-```
-
-## Training data 
-For training, our model uses procedurally generated mazes represented as 2D binary arrays, with 1 and 0 indicating open paths and walls, respectively. The generation algorithm ensures all mazes are solvable, maintaining fixed start and end points to optimize the learning process. This setup provides a controlled yet varied learning environment for the deep Q-learning algorithm to develop maze navigation strategies. 
 [Link to the full paper](https://docs.google.com/document/d/1bf9Lfl85LOU79KzbvKR7_3M7NwdvtFNDYFOPVd2XghA/edit?usp=sharing)
 
 ![](/images/maze.gif)
@@ -35,7 +18,24 @@ model = mouse_brain(maze)
 qtrain(model, maze, epochs=500, max_memory=30, data_size=8)
 ```
 
+## Training data 
+For training, our model uses procedurally generated mazes represented as 2D binary arrays, with 1 and 0 indicating open paths and walls, respectively. The generation algorithm ensures all mazes are solvable, maintaining fixed start and end points to optimize the learning process. This setup provides a controlled yet varied learning environment for the deep Q-learning algorithm to develop maze navigation strategies. 
+
 ![](/images/loss.png)
+
+## Project Structure
+The repository is structured as follows:
+```
+data/: Contains the raw datasets used for training and evaluation.
+models/: Holds the trained models and their weights for future reference or additional training.
+q-learning-train/: Source code for model implementation, training, and performance metrics.
+data-generation/: Includes the Qmaze environment and Experience replay mechanism
+
+Files
+- `train.py`: Contains the training loop and logic.
+- `mousebrain.py`: Defines the neural network architecture used by the mouse agent.
+- `data-generation/mazedata.py`: Includes the Qmaze environment and Experience replay mechanism.
+```
 
 ## Installation
 To set up the project environment, follow these steps:
