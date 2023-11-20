@@ -19,12 +19,6 @@ model = mouse_brain(maze)
 qtrain(model, maze, epochs=500, max_memory=30, data_size=8)
 ```
 
-## Training data 
-For training, our model uses procedurally generated mazes represented as 2D binary arrays, with 1 and 0 indicating open paths and walls, respectively. The generation algorithm ensures all mazes are solvable, maintaining fixed start and end points to optimize the learning process. This setup provides a controlled yet varied learning environment for the deep Q-learning algorithm to develop maze navigation strategies. 
-
-## Model Training
-Training involves generating an unlimited number of random mazes with consistent start and end points. This decision was made to optimize the training time and resources. The model is trained to find the optimal path to the reward, which is located in the bottom right corner of the maze.
-
 ## Results
 The final model achieved a 100% success rate with minimal loss. The model's policy generalizes well and finds optimal paths efficiently. The completion_check testing function confirmed that the model could consistently find the optimal path within 100 epochs.
 ![](/images/loss.png)
@@ -43,6 +37,12 @@ Files
 - `data-generation/mazedata.py`: Includes the Qmaze environment and Experience replay mechanism.
 ```
 
+## Training data 
+For training, our model uses procedurally generated mazes represented as 2D binary arrays, with 1 and 0 indicating open paths and walls, respectively. The generation algorithm ensures all mazes are solvable, maintaining fixed start and end points to optimize the learning process. This setup provides a controlled yet varied learning environment for the deep Q-learning algorithm to develop maze navigation strategies. 
+
+## Model Training
+Training involves generating an unlimited number of random mazes with consistent start and end points. This decision was made to optimize the training time and resources. The model is trained to find the optimal path to the reward, which is located in the bottom right corner of the maze.
+
 ## Installation
 To set up the project environment, follow these steps:
 ```
@@ -53,8 +53,8 @@ To set up the project environment, follow these steps:
 ```
 
 ## Usage
-Run QMaze-Data.ipynb in a Jupyter environment to simulate the maze-solving algorithm. You can use Google Colab or any local Jupyter setup.
-To visualize the performance and metrics of the learning process, refer to the visualization.py and metrics.py modules in the q-learning-train/ directory.
+Run data-generation/QMaze-Data.ipynb in a Jupyter environment to generate your training data.
+Run q-learning-train/reinforcement-mouse-learning.ipynb in a Jupyter environment to generate your training data.
 
 
 
